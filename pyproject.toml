@@ -1,0 +1,22 @@
+[project]
+name = "ptbr-retrieval-eval"
+version = "0.1.0"
+description = "Tiny retrieval eval for Portuguese RAG: BM25, Recall@k, MRR, and a pass/fail gate."
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.scripts]
+ptbr-eval = "ptbr_eval.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
